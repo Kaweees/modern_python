@@ -20,9 +20,11 @@
           with:
             submodules: true # Fetch submodules
             fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
-        - name: Install dependencies
+        - name: Initialize virtual environment
           run: |
             python3 -m venv venv
+        - name: Install dependencies
+          run: |
             source ./venv/bin/activate
             pip install poetry
             poetry install --no-root
