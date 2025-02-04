@@ -1,0 +1,31 @@
+---
+name: "Setup Python Environment"
+description: "Set up Python environment for the given Python version"
+# The inputs for this action:
+inputs:
+  python-version:
+    description: "Python version to use"
+    required: true
+    default: "3.12"
+  uv-version:
+    description: "uv version to use"
+    required: true
+    default: "0.5.20"
+
+# The sequence of runs in this action:
+runs:
+  using: "composite"
+  steps:
+    - name: Setup Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: ${{ inputs.python-version }}
+    - name: Setup uv
+      uses: astral-sh/setup-uv@v2
+      with:
+        version: ${{ inputs.uv-version }}
+        enable-cache: "true"
+        cache-suffix: ${{ matrix.python-version }}
+    - name: Install Python dependencies
+      run: uv sync --frozen
+      shell: bash

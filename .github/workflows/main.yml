@@ -1,0 +1,65 @@
+---
+name: Python Quality Check and Formatting
+# Controls when the workflow will run
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+  workflow_dispatch:
+defaults:
+  run:
+    working-directory: .
+
+# The sequence of runs in this workflow:
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - run: lsb_release -a
+      - run: uname -a
+      - name: Check out Repository Code
+        uses: actions/checkout@v4
+        with:
+          submodules: true # Fetch submodules
+          fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
+      - name: Cache pre-commit
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pre-commit
+          key: pre-commit-${{ hashFiles('.pre-commit-config.yaml') }}
+      - name: Set up the environment
+        uses: ./.github/actions/setup-python-env
+      - name: Run checks
+        run: make check
+  tests-and-type-check:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.9", "3.10", "3.11", "3.12", "3.13"]
+      fail-fast: false
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - run: lsb_release -a
+      - run: uname -a
+      - name: Check out Repository Code
+        uses: actions/checkout@v4
+        with:
+          submodules: true # Fetch submodules
+          fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
+      - name: Set up the environment
+        uses: ./.github/actions/setup-python-env
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Run unit tests
+        run: uv run python -m pytest tests --cov --cov-config=pyproject.toml --cov-report=xml
+      - name: Run type checks
+        run: uv run mypy
+      - name: Upload coverage reports to Codecov with GitHub Action on Python 3.11
+        uses: codecov/codecov-action@v5
+        if: ${{ matrix.python-version == '3.11' }}
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          slug: Kaweees/modern-python
