@@ -57,16 +57,16 @@ To get a local copy of the project up and running on your machine, follow these 
    make install
    ```
 
-3. Generate build files using CMake
+3. Run the pre-commit hooks
 
    ```sh
-   cmake -S .. -B . -DCMAKE_BUILD_TYPE=Debug
+   uv run pre-commit run -a
    ```
 
-4. Build the entire project
+4. Run the pro
 
    ```sh
-   cmake --build .
+
    ```
 
 <!-- PROJECT FILE STRUCTURE -->
@@ -86,7 +86,7 @@ graphics/
 
 ## License
 
-The source code for my dotfiles is distributed under the terms of the GNU General Public License v3.0, as I firmly believe that collaborating on free and open-source software fosters innovations that mutually and equitably beneficial to both collaborators and users alike. See [`LICENSE`](./LICENSE) for details and more information.
+The source code for this project is distributed under the terms of the GNU General Public License v3.0, as I firmly believe that collaborating on free and open-source software fosters innovations that mutually and equitably beneficial to both collaborators and users alike. See [`LICENSE`](./LICENSE) for details and more information.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
