@@ -1,25 +1,35 @@
-// For format details, see https://aka.ms/devcontainer.json. For config options, see the
-// README at: https://github.com/devcontainers/templates/tree/main/src/python
 {
-  "name": "modern-python",
-  // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-  "image": "mcr.microsoft.com/devcontainers/python:1-3.11-bullseye",
-  "features": {},
-
-  // Use 'postCreateCommand' to run commands after the container is created.
-  "postCreateCommand": "./.devcontainer/postCreateCommand.sh",
-
-  // Configure tool-specific properties.
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": "."
+  },
+  "containerEnv": {
+    "HOME": "/home/vscode"
+  },
   "customizations": {
     "vscode": {
-      "extensions": ["ms-python.python", "editorconfig.editorconfig"],
+      "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter",
+        "ms-python.vscode-pylance",
+        "redhat.vscode-yaml",
+        "mhutchie.git-graph",
+        "ms-azuretools.vscode-docker",
+        "njpwerner.autodocstring",
+        "pomdtr.excalidraw-editor",
+        "tamasfe.even-better-toml",
+        "kokakiwi.vscode-just"
+      ],
       "settings": {
-        "python.testing.pytestArgs": ["tests"],
-        "python.testing.unittestEnabled": false,
-        "python.testing.pytestEnabled": true,
-        "python.defaultInterpreterPath": "/workspaces/modern-python/.venv/bin/python",
-        "python.testing.pytestPath": "/workspaces/modern-python/.venv/bin/pytest"
+        "python.pythonPath": "/home/vscode/workspace/.venv/bin/python"
       }
     }
+  },
+  "postStartCommand": "git config --global --add safe.directory ${containerWorkspaceFolder} && git config --global --add credential.useHttpPath true",
+  "runArgs": ["--env-file", ".devcontainer/.env"],
+  "workspaceFolder": "/home/vscode/workspace",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/home/vscode/workspace,type=bind",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
   }
 }

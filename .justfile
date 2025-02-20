@@ -1,4 +1,5 @@
 alias s := setup
+alias r := run
 alias t := test
 alias b := build
 alias p := pre_commit
@@ -17,6 +18,10 @@ setup: install pre_commit_setup
 # Run pre-commit
 pre_commit:
  uv run pre-commit run -a
+
+# Run a package
+run *args='core':
+  uv run {{args}}
 
 # Run pytest
 test:

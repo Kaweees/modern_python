@@ -38,7 +38,7 @@ A template for developing production-ready Python applications.
 
 ### Prerequisites
 
-Before attempting to build this project, make sure you have [Python 3.10 or higher](https://www.python.org/downloads/) and [uv](https://docs.astral.sh/uv/#getting-started) installed on your machine.
+Before attempting to build this project, make sure you have [Python 3.10 or higher](https://www.python.org/downloads/), [just](https://just.systems/), and [uv](https://docs.astral.sh/uv/#getting-started) installed on your machine.
 
 ### Installation
 
@@ -51,22 +51,22 @@ To get a local copy of the project up and running on your machine, follow these 
    cd modern-python
    ```
 
-2. Install the environment and the pre-commit hooks
+2. Install the environment
 
    ```sh
-   make install
+   just setup
    ```
 
 3. Run the pre-commit hooks
 
    ```sh
-   uv run pre-commit run -a
+   just pre_commit
    ```
 
-4. Run the pro
+4. Run the project
 
    ```sh
-
+   just run
    ```
 
 <!-- PROJECT FILE STRUCTURE -->

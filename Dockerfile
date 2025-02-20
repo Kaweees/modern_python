@@ -1,21 +1,23 @@
-# Install uv
-FROM python:3.12-slim
+FROM python:3.11.9-slim-bookworm
+ARG PACKAGE="core"
+
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /bin/uv
 
-# Change the working directory to the `app` directory
 WORKDIR /app
 
-# Copy the lockfile and `pyproject.toml` into the image
-ADD uv.lock /app/uv.lock
-ADD pyproject.toml /app/pyproject.toml
+# Copy separately as it's a dependency for packages in core
+COPY shared/utils /app/shared/utils
 
-# Install dependencies
-RUN uv sync --frozen --no-install-project
+RUN --mount=type=bind,source=uv.lock,target=uv.lock \
+    --mount=type=bind,source=pyproject.toml,target=pyproject.toml \
+    uv sync --frozen --no-install-project --no-dev --package=$PACKAGE
 
-# Copy the project into the image
-ADD . /app
+COPY src/$PACKAGE /app/src/$PACKAGE
 
-# Sync the project
-RUN uv sync --frozen
+RUN --mount=type=bind,source=uv.lock,target=uv.lock \
+    --mount=type=bind,source=pyproject.toml,target=pyproject.toml \
+    uv sync --frozen --no-dev --package=$PACKAGE
 
-CMD [ "python", "modern_python/foo.py"]
+ENV PATH="/app/.venv/bin:$PATH"
+
+ENTRYPOINT [ "uv", "run" ]
