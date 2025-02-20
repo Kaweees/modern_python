@@ -11,6 +11,10 @@ inputs:
     description: "uv version to use"
     required: true
     default: "0.5.20"
+  just-version:
+    description: "just version to use"
+    required: true
+    default: "1.5.0"
 
 # The sequence of runs in this action:
 runs:
@@ -26,6 +30,10 @@ runs:
         version: ${{ inputs.uv-version }}
         enable-cache: "true"
         cache-suffix: ${{ matrix.python-version }}
+    - name: Setup just
+      uses: extractions/setup-just@v2
+      with:
+        version: ${{ inputs.just-version }}
     - name: Install Python dependencies
       run: uv sync --frozen
       shell: bash

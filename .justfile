@@ -3,6 +3,7 @@ alias r := run
 alias t := test
 alias b := build
 alias p := pre_commit
+alias c := clean
 
 # Install python dependencies
 install:
@@ -18,6 +19,12 @@ setup: install pre_commit_setup
 # Run pre-commit
 pre_commit:
  uv run pre-commit run -a
+
+# Clean the project
+clean:
+  # Remove cached files
+  find . -type d -name "__pycache__" -exec rm -r {} +
+  find . -type d -name "*.egg-info" -exec rm -r {} +
 
 # Run a package
 run *args='core':

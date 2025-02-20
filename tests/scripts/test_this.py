@@ -1,4 +1,4 @@
-from this import return_one  # type: ignore
+from utils import return_one  # type: ignore
 
 
 def test_this():
