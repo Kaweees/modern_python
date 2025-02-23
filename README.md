@@ -54,7 +54,7 @@ To get a local copy of the project up and running on your machine, follow these 
 2. Install the environment
 
    ```sh
-   just setup
+   just install
    ```
 
 3. Run the pre-commit hooks

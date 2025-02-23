@@ -1,20 +1,15 @@
-alias s := setup
+alias i := install
 alias r := run
 alias t := test
 alias b := build
 alias p := pre_commit
 alias c := clean
+alias ch := check
 
-# Install python dependencies
+# Install the virtual environment and pre-commit hooks
 install:
   uv sync
-
-# Install pre-commit hooks
-pre_commit_setup:
   uv run pre-commit install
-
-# Install python dependencies and pre-commit hooks
-setup: install pre_commit_setup
 
 # Run pre-commit
 pre_commit:
@@ -30,9 +25,20 @@ clean:
 run *args='core':
   uv run {{args}}
 
-# Run pytest
+# Test the code with pytest
 test:
-  uv run pytest tests
+  uv run python -m pytest --cov --cov-config=pyproject.toml --cov-report=xml
+
+# Run code quality tools
+check:
+  # Check lock file consistency
+  uv lock --locked
+  # Run pre-commit
+  uv run pre-commit run -a
+  # Run mypy
+  uv run mypy .
+  # Run deptry
+  uv run deptry .
 
 # Add scripts
 add_scripts:

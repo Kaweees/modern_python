@@ -3,7 +3,7 @@ name = "modern-python"
 version = "0.0.1"
 description = "Example of modern python project setup using UV"
 authors = [
-  {name="Miguel Villa Floran]", email="miguel.villafloran@gmail.com"}
+  { name = "Miguel Villa Floran]", email = "miguel.villafloran@gmail.com" },
 ]
 requires-python = ">=3.10"
 readme = "README.md"
@@ -14,19 +14,20 @@ utils = { workspace = true }
 core = { workspace = true }
 
 [tool.uv.workspace]
-members = [
-  "shared/*", "src/*"
-]
+members = ["shared/*", "src/*"]
 
 [tool.uv]
 dev-dependencies = [
-    "pre-commit>=3.8.0",
-    "ipykernel>=6.29.5",
-    "pytest>=8.3.2",
-    # These are added as dev dependencies becuase they should be available
-    #  when developing the project.
-    "utils",
-    "core",
+  "pre-commit>=3.8.0",
+  "ipykernel>=6.29.5",
+  "pytest>=8.3.2",
+  # These are added as dev dependencies becuase they should be available
+  #  when developing the project.
+  "utils",
+  "core",
+  "deptry>=0.23.0",
+  "mypy>=1.15.0",
+  "pytest-cov>=6.0.0",
 ]
 package = false
 
@@ -62,12 +63,7 @@ skips = ['B101']
 
 [tool.ruff]
 lint.ignore = ["E501"]
-extend-exclude = [
-  "__pycache__",
-  "docs",
-  "site",
-  ".tmp"
-]
+extend-exclude = ["__pycache__", "docs", "site", ".tmp"]
 
 [tool.pytest.ini_options]
 cache_dir = ".pytest_cache"

@@ -35,5 +35,5 @@ runs:
       with:
         version: ${{ inputs.just-version }}
     - name: Install Python dependencies
-      run: uv sync --frozen
+      run: just install
       shell: bash
