@@ -1,9 +1,9 @@
 [project]
-name = "monorepo"
-version = "0.0.0"
-description = "Example of monorepo setup using UV"
+name = "modern-python"
+version = "0.0.1"
+description = "Example of modern python project setup using UV"
 authors = [
-  {name="Jasper Ginn", email="jasperginn@gmail.com"}
+  {name="Miguel Villa Floran]", email="miguel.villafloran@gmail.com"}
 ]
 requires-python = ">=3.10"
 readme = "README.md"

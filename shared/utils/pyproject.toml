@@ -3,7 +3,7 @@ name = "utils"
 version = "0.0.0"
 description = "Utility functions"
 authors = [
-  {name="Jasper Ginn", email="jasperginn@gmail.com"}
+  {name="Miguel Villa Floran", email="miguel.villafloran@gmail.com"}
 ]
 requires-python = ">=3.10"
 readme = "README.md"

@@ -1,6 +1,6 @@
 import typer
 
-from src import return_two
+from core import return_two
 
 app = typer.Typer()
 

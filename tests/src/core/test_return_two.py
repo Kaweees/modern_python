@@ -1,4 +1,4 @@
-from core.src import return_two
+from core import return_two
 
 
 def test_return_two():
