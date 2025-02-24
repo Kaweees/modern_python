@@ -3,12 +3,11 @@ name = "utils"
 version = "0.0.0"
 description = "Utility functions"
 authors = [
-  {name="Miguel Villa Floran", email="miguel.villafloran@gmail.com"}
+  { name = "Miguel Villa Floran", email = "miguel.villafloran@gmail.com" },
 ]
 requires-python = ">=3.10"
 readme = "README.md"
-dependencies = [
-]
+dependencies = []
 
 [build-system]
 requires = ["hatchling"]
