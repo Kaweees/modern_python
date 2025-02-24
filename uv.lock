@@ -448,31 +448,37 @@ wheels = [
 name = "modern-python"
 version = "0.0.1"
 source = { virtual = "." }
+dependencies = [
+    { name = "core" },
+    { name = "typer" },
+    { name = "utils" },
+]
 
 [package.dev-dependencies]
 dev = [
-    { name = "core" },
     { name = "deptry" },
     { name = "ipykernel" },
     { name = "mypy" },
     { name = "pre-commit" },
     { name = "pytest" },
     { name = "pytest-cov" },
-    { name = "utils" },
 ]
 
 [package.metadata]
+requires-dist = [
+    { name = "core", editable = "src/core" },
+    { name = "typer", specifier = ">=0.12.5" },
+    { name = "utils", editable = "shared/utils" },
+]
 
 [package.metadata.requires-dev]
 dev = [
-    { name = "core", editable = "src/core" },
     { name = "deptry", specifier = ">=0.23.0" },
     { name = "ipykernel", specifier = ">=6.29.5" },
     { name = "mypy", specifier = ">=1.15.0" },
     { name = "pre-commit", specifier = ">=3.8.0" },
     { name = "pytest", specifier = ">=8.3.2" },
     { name = "pytest-cov", specifier = ">=6.0.0" },
-    { name = "utils", editable = "shared/utils" },
 ]
 
 [[package]]

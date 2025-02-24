@@ -51,22 +51,16 @@ To get a local copy of the project up and running on your machine, follow these 
    cd modern-python
    ```
 
-2. Install the environment
+2. Install the virtual environment and pre-commit hooks
 
    ```sh
    just install
    ```
 
-3. Run the pre-commit hooks
+3. Run the project
 
    ```sh
-   just pre_commit
-   ```
-
-4. Run the project
-
-   ```sh
-   just run
+   just run <package_name>
    ```
 
 <!-- PROJECT FILE STRUCTURE -->
@@ -74,14 +68,17 @@ To get a local copy of the project up and running on your machine, follow these 
 ## Project Structure
 
 ```sh
-graphics/
+modern-python/
 ├── .github/                       - GitHub Actions CI/CD workflows
-├── include/                       - project header files
-├── src/                           - project source files
-│   └── main.c                     - Entry point, main function
-├── CMakeLists.txt                 - CMake build script
-├── LICENSE                        - project license
-└── README.md                      - you are here
+├── scripts/                       - Standalone scripts
+├── shared/
+│   └── utils/                     - Shared utility functions
+├── src/                           - Project packages
+│   ├── core/                      - Core application logic
+│   └── ...                        - Other packages
+├── tests/                         - Project tests (mirrors the main project structure)
+├── LICENSE                        - Project license
+└── README.md                      - You are here
 ```
 
 ## License

@@ -1,13 +1,13 @@
 [project]
 name = "modern-python"
 version = "0.0.1"
-description = "Example of modern python project setup using UV"
+description = "A template for developing production-ready Python applications."
 authors = [
-  { name = "Miguel Villa Floran]", email = "miguel.villafloran@gmail.com" },
+    { name = "Miguel Villa Floran", email = "miguel.villafloran@gmail.com" },
 ]
 requires-python = ">=3.10"
 readme = "README.md"
-dependencies = []
+dependencies = ["utils", "core", "typer>=0.12.5"]
 
 [tool.uv.sources]
 utils = { workspace = true }
@@ -18,16 +18,14 @@ members = ["shared/*", "src/*"]
 
 [tool.uv]
 dev-dependencies = [
-  "pre-commit>=3.8.0",
-  "ipykernel>=6.29.5",
-  "pytest>=8.3.2",
-  # These are added as dev dependencies becuase they should be available
-  #  when developing the project.
-  "utils",
-  "core",
-  "deptry>=0.23.0",
-  "mypy>=1.15.0",
-  "pytest-cov>=6.0.0",
+    "pre-commit>=3.8.0",
+    "ipykernel>=6.29.5",
+    "pytest>=8.3.2",
+    # These are added as dev dependencies becuase they should be available
+    #  when developing the project.
+    "deptry>=0.23.0",
+    "mypy>=1.15.0",
+    "pytest-cov>=6.0.0",
 ]
 package = false
 

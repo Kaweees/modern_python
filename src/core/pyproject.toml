@@ -3,14 +3,11 @@ name = "core"
 version = "0.0.0"
 description = "Core functionality"
 authors = [
-  {name="Miguel Villa Floran]", email="miguel.villafloran@gmail.com"}
+  { name = "Miguel Villa Floran", email = "miguel.villafloran@gmail.com" },
 ]
 requires-python = ">=3.10"
 readme = "README.md"
-dependencies = [
-    "utils",
-    "typer>=0.12.5"
-]
+dependencies = ["utils", "typer>=0.12.5"]
 
 [project.scripts]
 core = "core.cli:app"
