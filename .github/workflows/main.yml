@@ -16,8 +16,10 @@ jobs:
   quality:
     runs-on: ubuntu-latest
     steps:
-      - run: lsb_release -a
-      - run: uname -a
+      - name: Check OS Version
+        run: lsb_release -a
+      - name: Show Kernel Information
+        run: uname -a
       - name: Check out Repository Code
         uses: actions/checkout@v4
         with:
