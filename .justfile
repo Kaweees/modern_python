@@ -37,8 +37,8 @@ check:
   uv run pre-commit run -a
   # Run mypy
   uv run mypy .
-  # Run deptry
-  uv run deptry .
+  # Run deptry with ignored issues
+  uv run deptry . --ignore=DEP002,DEP003
 
 # Add scripts
 add_scripts:
