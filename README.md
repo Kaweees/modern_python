@@ -29,8 +29,10 @@ A template for developing production-ready Python applications.
 ### Built With
 
 [![Python][Python-shield]][Python-url]
-[![GitHub Actions][github-actions-shield]][github-actions-url]
+[![Pytest][Pytest-shield]][Pytest-url]
+[![Codecov][Codecov-shield]][Codecov-url]
 [![Docker][Docker-shield]][Docker-url]
+[![GitHub Actions][github-actions-shield]][github-actions-url]
 
 <!-- GETTING STARTED -->
 
@@ -98,9 +100,13 @@ The source code for this project is distributed under the terms of the MIT Licen
 <!-- MARKDOWN SHIELD BAGDES & LINKS -->
 <!-- https://github.com/Ileriayo/markdown-badges -->
 
-[Python-shield]: https://img.shields.io/badge/Python-%23008080.svg?style=for-the-badge&logo=python&logoColor=306998&labelColor=222222&color=306998
+[Python-shield]: https://img.shields.io/badge/Python-%23008080.svg?style=for-the-badge&logo=python&logoColor=FFDD54&labelColor=222222&color=306998
 [Python-url]: https://www.python.org/
-[github-actions-shield]: https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=2671E5&labelColor=222222&color=2671E5
-[github-actions-url]: https://github.com/features/actions
+[Pytest-shield]: https://img.shields.io/badge/pytest-%23008080.svg?style=for-the-badge&logo=pytest&logoColor=2F9FE3&labelColor=222222&color=2F9FE3
+[Pytest-url]: https://docs.pytest.org
 [Docker-shield]: https://img.shields.io/badge/docker-%232671E5.svg?style=for-the-badge&logo=docker&logoColor=1D63ED&labelColor=222222&color=1D63ED
 [Docker-url]: https://www.docker.com/
+[Codecov-shield]: https://img.shields.io/badge/codecov-%23008080.svg?style=for-the-badge&logo=codecov&logoColor=FF0077&labelColor=222222&color=FF0077
+[Codecov-url]: https://codecov.io/
+[github-actions-shield]: https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=2671E5&labelColor=222222&color=2671E5
+[github-actions-url]: https://github.com/features/actions
