@@ -1,11 +1,20 @@
-def hello():
-    print("Hello from utils pkg")
+import os
+
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
-def return_one() -> int:
-    """Returns 1
+def get_token(token_name: str) -> str:
+    """Get a token from the environment variables
+
+    Args:
+        token_name (str): The name of the token to get
 
     Returns:
-        int: The number 1
+        str: The token
     """
-    return 1
+    token = os.environ.get(token_name)
+    if token is None:
+        raise ValueError(f"{token_name} not found in environment variables")
+    return token
