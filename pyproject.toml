@@ -63,7 +63,19 @@ skips = ['B101']
 
 [tool.ruff]
 lint.ignore = ["E501"]
-extend-exclude = ["__pycache__", "docs", "site", ".tmp"]
+extend-exclude = [
+  "__pycache__",
+  "docs",
+  "site",
+  ".eggs",
+  ".git",
+  ".venv",
+  "build",
+  "dist",
+  "notebooks",
+  ".cache",
+]
+line-length = 100
 
 [tool.pytest.ini_options]
 cache_dir = ".pytest_cache"
