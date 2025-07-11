@@ -57,6 +57,7 @@ check:
 # Remove build artifacts and non-essential files
 clean:
   @echo "Cleaning..."
+  @find . -type d -name ".venv" -exec rm -r {} +
   @find . -type d -name "__pycache__" -exec rm -r {} +
   @find . -type d -name "*.egg-info" -exec rm -r {} +
 

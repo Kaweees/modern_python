@@ -2,10 +2,11 @@
 
 pkgs.mkShell {
   buildInputs = with pkgs; [
+    git # Git
     python311 # Python 3.11
-    uv # Python package manage
+    uv # Python package manager
     just # Just
-    nixfmt-classic # Nix formatterr
+    nixfmt-classic # Nix formatter
   ];
 
   # Shell hook to set up environment
