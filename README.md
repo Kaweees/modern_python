@@ -30,8 +30,8 @@ A template for developing production-ready Python applications.
 
 [![Python][Python-shield]][Python-url]
 [![Pytest][Pytest-shield]][Pytest-url]
+[![Nix][Nix-shield]][Nix-url]
 [![Codecov][Codecov-shield]][Codecov-url]
-[![Docker][Docker-shield]][Docker-url]
 [![GitHub Actions][github-actions-shield]][github-actions-url]
 
 <!-- GETTING STARTED -->
@@ -40,7 +40,7 @@ A template for developing production-ready Python applications.
 
 ### Prerequisites
 
-Before attempting to build this project, make sure you have [Python 3.10 or higher](https://www.python.org/downloads/), [just](https://just.systems/), and [uv](https://docs.astral.sh/uv/#getting-started) installed on your machine.
+Before attempting to build this project, make sure you have [Nix](https://nixos.org/download.html) with [Flake](https://nixos.wiki/wiki/Flakes) support installed on your machine.
 
 ### Installation
 
@@ -53,10 +53,11 @@ To get a local copy of the project up and running on your machine, follow these 
    cd modern-python
    ```
 
-2. Install the virtual environment and pre-commit hooks
+2. Install the project dependencies
 
    ```sh
-   just install
+   nix-shell --max-jobs $(nproc) # Linux / Windows (WSL)
+   nix-shell --max-jobs $(sysctl -n hw.ncpu) # macOS
    ```
 
 3. Run the project
@@ -85,7 +86,7 @@ modern-python/
 
 ## License
 
-The source code for this project is distributed under the terms of the MIT License, as I firmly believe that collaborating on free and open-source software fosters innovations that mutually and equitably beneficial to both collaborators and users alike. See [`LICENSE`](./LICENSE) for details and more information.
+The source code for [Kaweees/modern-python](https://github.com/Kaweees/modern-python) is distributed under the terms of the MIT License, as I firmly believe that collaborating on free and open-source software fosters innovations that mutually and equitably beneficial to both collaborators and users alike. See [`LICENSE`](./LICENSE) for details and more information.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
@@ -104,8 +105,8 @@ The source code for this project is distributed under the terms of the MIT Licen
 [Python-url]: https://www.python.org/
 [Pytest-shield]: https://img.shields.io/badge/pytest-%23008080.svg?style=for-the-badge&logo=pytest&logoColor=2F9FE3&labelColor=222222&color=2F9FE3
 [Pytest-url]: https://docs.pytest.org
-[Docker-shield]: https://img.shields.io/badge/docker-%232671E5.svg?style=for-the-badge&logo=docker&logoColor=1D63ED&labelColor=222222&color=1D63ED
-[Docker-url]: https://www.docker.com/
+[Nix-shield]: https://img.shields.io/badge/NIX-%23008080.svg?style=for-the-badge&logo=NixOS&logoColor=5277C3&labelColor=222222&color=5277C3
+[Nix-url]: https://nixos.org/
 [Codecov-shield]: https://img.shields.io/badge/codecov-%23008080.svg?style=for-the-badge&logo=codecov&logoColor=FF0077&labelColor=222222&color=FF0077
 [Codecov-url]: https://codecov.io/
 [github-actions-shield]: https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=2671E5&labelColor=222222&color=2671E5
