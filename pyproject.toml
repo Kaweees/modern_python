@@ -1,5 +1,5 @@
 [project]
-name = "modern-python"
+name = "modern_python"
 version = "0.0.1"
 description = "A template for developing production-ready Python applications."
 authors = [

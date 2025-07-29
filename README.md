@@ -14,12 +14,12 @@
 
 </div>
 
-<a href="https://github.com/Kaweees/modern-python">
+<a href="https://github.com/Kaweees/modern_python">
   <img alt="Python Logo" src="assets/img/python.png" align="right" width="150">
 </a>
 
 <div align="left">
-  <h1><em><a href="https://miguelvf.dev/blog/dotfiles/compendium">~modern-python</a></em></h1>
+  <h1><em><a href="https://miguelvf.dev/blog/dotfiles/compendium">~modern_python</a></em></h1>
 </div>
 
 <!-- ABOUT THE PROJECT -->
@@ -49,8 +49,8 @@ To get a local copy of the project up and running on your machine, follow these 
 1. Clone the project repository
 
    ```sh
-   git clone https://github.com/Kaweees/modern-python.git
-   cd modern-python
+   git clone https://github.com/Kaweees/modern_python.git
+   cd modern_python
    ```
 
 2. Install the project dependencies
@@ -71,7 +71,7 @@ To get a local copy of the project up and running on your machine, follow these 
 ## Project Structure
 
 ```sh
-modern-python/
+modern_python/
 ├── .github/                       - GitHub Actions CI/CD workflows
 ├── scripts/                       - Standalone scripts
 ├── shared/
@@ -86,17 +86,17 @@ modern-python/
 
 ## License
 
-The source code for [Kaweees/modern-python](https://github.com/Kaweees/modern-python) is distributed under the terms of the MIT License, as I firmly believe that collaborating on free and open-source software fosters innovations that mutually and equitably beneficial to both collaborators and users alike. See [`LICENSE`](./LICENSE) for details and more information.
+The source code for [Kaweees/modern_python](https://github.com/Kaweees/modern_python) is distributed under the terms of the MIT License, as I firmly believe that collaborating on free and open-source software fosters innovations that mutually and equitably beneficial to both collaborators and users alike. See [`LICENSE`](./LICENSE) for details and more information.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/Kaweees/modern-python.svg?style=for-the-badge
-[contributors-url]: https://github.com/Kaweees/modern-python/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/Kaweees/modern-python.svg?style=for-the-badge
-[forks-url]: https://github.com/Kaweees/modern-python/network/members
-[stars-shield]: https://img.shields.io/github/stars/Kaweees/modern-python.svg?style=for-the-badge
-[stars-url]: https://github.com/Kaweees/modern-python/stargazers
+[contributors-shield]: https://img.shields.io/github/contributors/Kaweees/modern_python.svg?style=for-the-badge
+[contributors-url]: https://github.com/Kaweees/modern_python/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/Kaweees/modern_python.svg?style=for-the-badge
+[forks-url]: https://github.com/Kaweees/modern_python/network/members
+[stars-shield]: https://img.shields.io/github/stars/Kaweees/modern_python.svg?style=for-the-badge
+[stars-url]: https://github.com/Kaweees/modern_python/stargazers
 
 <!-- MARKDOWN SHIELD BAGDES & LINKS -->
 <!-- https://github.com/Ileriayo/markdown-badges -->

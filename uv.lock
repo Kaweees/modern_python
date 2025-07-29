@@ -5,7 +5,7 @@ requires-python = ">=3.10"
 [manifest]
 members = [
     "core",
-    "modern-python",
+    "modern_python",
     "utils",
 ]
 
@@ -457,7 +457,7 @@ wheels = [
 ]
 
 [[package]]
-name = "modern-python"
+name = "modern_python"
 version = "0.0.1"
 source = { virtual = "." }
 dependencies = [
