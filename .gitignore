@@ -1,27 +1,34 @@
 *
 
 !.github/
+!.github/**/
 !assets/
+!assets/**/
 !.editorconfig
 !.gitattributes
 !.gitignore
-!.justfile
-!.pre-commit-config.yaml
+!.gitmodules
+!.python-version
+!example.env
+!LICENSE
 !README.md
 
-!src/
-!src/**/
-!shared/
-!shared/**/
+
 !scripts/
 !scripts/**/
+!shared/
+!shared/**/
+!src/
+!src/**/
+!tests/
+!tests/**/
 
-!*.md
-!*.svg
-!*.png
-!*.nix
 !*.lock
-!*.py
+!*.md
 !*.toml
 !*.yaml
+!*.yml
 !*.ini
+!*.sh
+!*.py
+!*.cu

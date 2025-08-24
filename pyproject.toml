@@ -1,3 +1,7 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
 [project]
 name = "modern_python"
 version = "0.0.1"
@@ -5,7 +9,7 @@ description = "A template for developing production-ready Python applications."
 authors = [
   { name = "Miguel Villa Floran", email = "miguel.villafloran@gmail.com" },
 ]
-requires-python = ">=3.10"
+requires-python = ">=3.11,<3.12"
 readme = "README.md"
 license = { file = "LICENSE" }
 
