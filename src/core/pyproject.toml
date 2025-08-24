@@ -1,3 +1,7 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
 [project]
 name = "core"
 version = "0.0.0"
@@ -5,16 +9,13 @@ description = "Core functionality"
 authors = [
   { name = "Miguel Villa Floran", email = "miguel.villafloran@gmail.com" },
 ]
-requires-python = ">=3.10"
+requires-python = ">=3.11,<3.12"
 readme = "README.md"
+
 dependencies = ["utils", "typer>=0.12.5"]
 
 [project.scripts]
 core = "core.cli:app"
-
-[build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
 
 [tool.uv.sources]
 utils = { workspace = true }

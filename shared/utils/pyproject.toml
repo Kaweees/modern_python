@@ -1,3 +1,7 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
 [project]
 name = "utils"
 version = "0.0.0"
@@ -5,12 +9,7 @@ description = "Utility functions"
 authors = [
   { name = "Miguel Villa Floran", email = "miguel.villafloran@gmail.com" },
 ]
-requires-python = ">=3.10"
+requires-python = ">=3.11,<3.12"
 readme = "README.md"
-dependencies = [
-    "dotenv>=0.9.9",
-]
 
-[build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
+dependencies = ["dotenv>=0.9.9"]

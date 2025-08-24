@@ -64,7 +64,7 @@ clean:
 # Format the project
 format:
   @echo "Formatting..."
-  @nixfmt .
+  @find . -name "*.nix" -type f -exec nixfmt {} \;
 
 # Add scripts
 add_scripts:
