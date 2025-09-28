@@ -30,7 +30,7 @@ pre_commit:
 # Build the project
 build target:
   @echo "Building..."
-  @docker build -t packages/{{target}} --build-arg PACKAGE={{target}} .
+  @uv run hatch build --target {{target}}
 
 # Run a package
 run *args='core':
@@ -45,13 +45,9 @@ test:
 # Run code quality tools
 check:
   @echo "Checking..."
-  @# Check lock file consistency
   @uv lock --locked
-  @# Run pre-commit
   @uv run pre-commit run -a
-  @# Run mypy
   @uv run mypy .
-  @# Run deptry with ignored issues
   @uv run deptry . --ignore=DEP002,DEP003
 
 # Remove build artifacts and non-essential files
