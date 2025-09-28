@@ -1,3 +1,8 @@
+"""Core package."""
+
+__version__ = "0.1.0"
+
+
 def hello():
     print("Hello from core pkg")
 
