@@ -9,7 +9,7 @@ description = "A template for developing production-ready Python applications."
 authors = [
   { name = "Miguel Villa Floran", email = "miguel.villafloran@gmail.com" },
 ]
-requires-python = ">=3.11,<3.12"
+requires-python = ">=3.12,<3.13"
 readme = "README.md"
 license = { file = "LICENSE" }
 
@@ -22,8 +22,8 @@ core = { workspace = true }
 [tool.uv.workspace]
 members = ["shared/*", "src/*"]
 
-[tool.uv]
-dev-dependencies = [
+[dependency-groups]
+dev = [
   "pre-commit>=4.1.0",
   "ipykernel>=6.29.5",
   "pytest>=8.3.2",
@@ -33,30 +33,12 @@ dev-dependencies = [
   "mypy>=1.15.0",
   "pytest-cov>=6.0.0",
 ]
-package = false
 
-[tool.black]
-line-length = 88
-exclude = '''
-^/(
-  (
-      \.eggs         # exclude a few common directories in the
-    | \.git          # root of the project
-    | \.hg
-    | \.mypy_cache
-    | \.venv
-    | _build
-    | build
-    | dist
-    | .notebooks
-    | .nox
-  )
-)
-'''
+[tool.hatch.metadata]
+allow-direct-references = true
 
-[tool.isort]
-profile = "black"
-extend_skip = [".tmp", ".venv"]
+[tool.hatch.build.targets.wheel]
+packages = ["shared/utils", "src/core"]
 
 [tool.mypy]
 exclude = "^.tmp/"
@@ -66,7 +48,7 @@ ignore_missing_imports = true
 skips = ['B101']
 
 [tool.ruff]
-lint.ignore = ["E501"]
+
 extend-exclude = [
   "__pycache__",
   "docs",
@@ -80,6 +62,10 @@ extend-exclude = [
   ".cache",
 ]
 line-length = 100
+
+[tool.ruff.lint]
+ignore = ["E501"]
+select = ["E", "F", "I"]
 
 [tool.pytest.ini_options]
 cache_dir = ".pytest_cache"

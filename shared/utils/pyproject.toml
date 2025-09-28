@@ -9,7 +9,7 @@ description = "Utility functions"
 authors = [
   { name = "Miguel Villa Floran", email = "miguel.villafloran@gmail.com" },
 ]
-requires-python = ">=3.11,<3.12"
+requires-python = ">=3.12,<3.13"
 readme = "README.md"
 
 dependencies = ["dotenv>=0.9.9"]
