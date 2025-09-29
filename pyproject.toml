@@ -27,8 +27,6 @@ dev = [
   "pre-commit>=4.1.0",
   "ipykernel>=6.29.5",
   "pytest>=8.3.2",
-  # These are added as dev dependencies becuase they should be available
-  #  when developing the project.
   "deptry>=0.23.0",
   "mypy>=1.15.0",
   "pytest-cov>=6.0.0",

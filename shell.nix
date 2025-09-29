@@ -4,7 +4,7 @@
 
 pkgs.mkShell {
   buildInputs = with pkgs; [
-    python311 # Python 3.11
+    python312 # Python 3.12
     uv # Python package manager
     nixfmt # Nix formatter
     just # Just

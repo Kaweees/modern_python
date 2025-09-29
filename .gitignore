@@ -25,6 +25,7 @@
 !tests/**/
 
 !*.md
+!*.mdc
 !*.svg
 !*.png
 !*.nix
