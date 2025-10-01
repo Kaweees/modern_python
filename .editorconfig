@@ -19,6 +19,6 @@ indent_size = 3
 [*.nix]
 indent_size = 2
 
-[*.py]
+[*.{py,ipynb}]
 indent_size = 4
 max_line_length = 120
