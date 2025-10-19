@@ -3,6 +3,7 @@
 # run `just` from this directory to see available commands
 
 alias i := install
+alias u := update
 alias p := pre_commit
 alias b := build
 alias r := run
@@ -20,7 +21,12 @@ default:
 install:
   @echo "Installing..."
   @uv sync
-  @uv run pre-commit install
+  @uv run pre-commit install --install-hooks
+
+update:
+  @echo "Updating..."
+  @uv sync --upgrade
+  @uv run pre-commit autoupdate
 
 # Run pre-commit
 pre_commit:
