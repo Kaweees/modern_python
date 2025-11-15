@@ -1,7 +1,7 @@
 from utils import get_token
 
 
-def test_get_token(monkeypatch):
+def get_token_test(monkeypatch):
     # Set up mock environment variables for the test
     monkeypatch.setenv("TOKEN", "test_token")
 
