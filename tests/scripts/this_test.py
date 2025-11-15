@@ -1,5 +1,5 @@
 from this import return_one  # type: ignore
 
 
-def test_this():
+def return_one_test():
     assert return_one() == 1
