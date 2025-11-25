@@ -51,13 +51,13 @@ repos:
           ]
 
   - repo: https://github.com/asottile/pyupgrade
-    rev: "v3.21.0"
+    rev: "v3.21.2"
     hooks:
       - id: pyupgrade
         args: ["--py310-plus", "--keep-runtime-typing"]
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: "v0.14.1"
+    rev: "v0.14.6"
     hooks:
       # Formatter first so code is canonicalized
       - id: ruff-format

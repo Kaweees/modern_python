@@ -1,3 +1,8 @@
+<!--
+*** This readme was adapted from Best-README-Template.
+  https://github.com/othneildrew/Best-README-Template
+-->
+
 <!-- PROJECT SHIELDS -->
 <!--
 *** I'm using markdown "reference style" links for readability.
@@ -15,11 +20,11 @@
 </div>
 
 <a href="https://github.com/Kaweees/modern_python">
-  <img alt="Python Logo" src="assets/img/python.png" align="right" width="150">
+    <img alt="Python Logo" src="assets/img/python.png" align="right" width="150">
 </a>
 
 <div align="left">
-  <h1><em><a href="https://miguelvf.dev/blog/dotfiles/compendium">~modern_python</a></em></h1>
+    <h1><em><a href="https://github.com/Kaweees/modern_python">~modern_python</a></em></h1>
 </div>
 
 <!-- ABOUT THE PROJECT -->
@@ -34,13 +39,19 @@ A template for developing production-ready Python applications.
 [![Codecov][Codecov-shield]][Codecov-url]
 [![GitHub Actions][github-actions-shield]][github-actions-url]
 
-<!-- GETTING STARTED -->
+<!-- PROJECT PREVIEW -->
+## Preview
 
+<p align="center">
+    <img src="assets/img/demo.mp4" width = "80%" alt = "Video demonstration"/>
+</p>
+
+<!-- GETTING STARTED -->
 ## Getting Started
 
 ### Prerequisites
 
-Before attempting to build this project, make sure you have [Nix](https://nixos.org/download.html) with [Flake](https://nixos.wiki/wiki/Flakes) support installed on your machine.
+Before attempting to build this project, make sure you have [direnv](https://direnv.net/) and [Nix](https://nixos.org/download.html) with [Flake](https://nixos.wiki/wiki/Flakes) support installed on your machine.
 
 ### Installation
 
@@ -48,12 +59,20 @@ To get a local copy of the project up and running on your machine, follow these 
 
 1. Clone the project repository
 
-   ```sh
-   git clone https://github.com/Kaweees/modern_python.git
-   cd modern_python
-   ```
+    ```sh
+    git clone https://github.com/Kaweees/modern_python.git
+    cd modern_python
+    ```
 
 2. Install the project dependencies
+
+   If you have `direnv` installed, simply allow the environment:
+
+   ```sh
+   direnv allow
+   ```
+
+   Otherwise, you can use `nix-shell` to enter the environment:
 
    ```sh
    nix-shell --max-jobs $(nproc) # Linux / Windows (WSL)
@@ -62,12 +81,11 @@ To get a local copy of the project up and running on your machine, follow these 
 
 3. Run the project
 
-   ```sh
-   just run <package_name>
-   ```
+    ```sh
+    just run <package_name>
+    ```
 
 <!-- PROJECT FILE STRUCTURE -->
-
 ## Project Structure
 
 ```sh
@@ -86,7 +104,7 @@ modern_python/
 
 ## License
 
-The source code for [Kaweees/modern_python](https://github.com/Kaweees/modern_python) is distributed under the terms of the MIT License, as I firmly believe that collaborating on free and open-source software fosters innovations that mutually and equitably beneficial to both collaborators and users alike. See [`LICENSE`](./LICENSE) for details and more information.
+The source code for [Kaweees/modern_python](https://github.com/Kaweees/modern_python) is distributed under the terms of the GNU General Public License v3.0, as I firmly believe that collaborating on free and open-source software fosters innovations that mutually and equitably beneficial to both collaborators and users alike. See [`LICENSE`](./LICENSE) for details and more information.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->

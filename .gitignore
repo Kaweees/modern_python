@@ -1,9 +1,9 @@
 *
 
 !.github/
-!.github/**
+!.github/**/
 !assets/
-!assets/**
+!assets/**/
 !.editorconfig
 !.envrc
 !.gitattributes
@@ -17,13 +17,13 @@
 !README.md
 
 !scripts/
-!scripts/**
+!scripts/**/
 !shared/
-!shared/**
+!shared/**/
 !src/
-!src/**
+!src/**/
 !tests/
-!tests/**
+!tests/**/
 
 !*.md
 !*.mdc

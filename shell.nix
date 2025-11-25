@@ -12,6 +12,7 @@ pkgs.mkShell {
 
   # Shell hook to set up environment
   shellHook = ''
+    export TMPDIR=/tmp
     just install
   '';
 }
