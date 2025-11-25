@@ -17,6 +17,7 @@ extend-select = [
   # Ruff-specific rules
   "RUF",
 ]
+
 ignore = [
   "E402",   # Module level import not at top of file
   "E501",   # Line too long
@@ -30,12 +31,8 @@ ignore = [
 ]
 select = ["E", "F", "I"]
 
-[lint.per-file-ignores]
-"*/__init__.py" = ["F401"] # Unused import
-
 [lint.isort]
 known-first-party = ["modern_python", "core"]
-
 
 [lint.pydocstyle]
 convention = "google"

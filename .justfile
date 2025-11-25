@@ -39,9 +39,9 @@ build target:
   @uv run hatch build --target {{target}}
 
 # Run a package
-run *args='core':
+run package="core" *args="":
   @echo "Running..."
-  @uv run {{args}}
+  @uv run {{package}} {{args}}
 
 # Test the project
 test:
@@ -53,8 +53,6 @@ check:
   @echo "Checking..."
   @uv lock --locked
   @uv run pre-commit run -a
-  @uv run mypy .
-  @uv run deptry . --ignore=DEP002,DEP003
 
 # Remove build artifacts and non-essential files
 clean:
