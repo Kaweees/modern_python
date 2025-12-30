@@ -33,7 +33,7 @@ runs:
     - name: Setup just
       uses: extractions/setup-just@v2
       with:
-        version: ${{ inputs.just-version }}
+        just-version: ${{ inputs.just-version }}
     - name: Install Python dependencies
       run: just install
       shell: bash
