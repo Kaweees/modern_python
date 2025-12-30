@@ -57,10 +57,10 @@ repos:
         args: ["--py310-plus", "--keep-runtime-typing"]
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: "v0.14.6"
+    rev: "v0.14.10"
     hooks:
       # Formatter first so code is canonicalized
       - id: ruff-format
       # Then linting + autofixes
       - id: ruff
-        args: ["--output-format=full", "--fix", "--config", "ruff.toml"]
+        args: ["--output-format=full", "--fix", "--unsafe-fixes", "--config", "ruff.toml"]
