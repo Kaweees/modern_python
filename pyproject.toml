@@ -9,7 +9,7 @@ description = "A template for developing production-ready Python applications."
 authors = [
   { name = "Miguel Villa Floran", email = "miguel.villafloran@gmail.com" },
 ]
-requires-python = ">=3.12,<3.13"
+requires-python = ">=3.11,<3.14"
 readme = "README.md"
 license = { file = "LICENSE" }
 
@@ -23,12 +23,7 @@ core = { workspace = true }
 members = ["shared/*", "src/*"]
 
 [dependency-groups]
-dev = [
-  "pre-commit>=4.1.0",
-  "ipykernel>=6.29.5",
-  "pytest>=8.3.2",
-  "pytest-cov>=6.0.0",
-]
+dev = ["pre-commit", "ipykernel", "pytest", "pytest-cov"]
 
 [tool.hatch.metadata]
 allow-direct-references = true
