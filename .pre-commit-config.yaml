@@ -38,8 +38,15 @@ repos:
       - id: detect-private-key
       - id: forbid-new-submodules
 
+  - repo: https://github.com/editorconfig-checker/editorconfig-checker.python
+    rev: "3.6.1"
+    hooks:
+      - id: editorconfig-checker
+        alias: ec
+        exclude: LICENSE
+
   - repo: https://github.com/PyCQA/autoflake
-    rev: "v2.3.1"
+    rev: "v2.3.3"
     hooks:
       - id: autoflake
         args:
@@ -57,10 +64,11 @@ repos:
         args: ["--py310-plus", "--keep-runtime-typing"]
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: "v0.14.10"
+    rev: "v0.15.5"
     hooks:
       # Formatter first so code is canonicalized
       - id: ruff-format
+        args: ["--config", "ruff.toml"]
       # Then linting + autofixes
       - id: ruff
         args: ["--output-format=full", "--fix", "--unsafe-fixes", "--config", "ruff.toml"]

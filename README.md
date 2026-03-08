@@ -1,6 +1,6 @@
 <!--
 *** This readme was adapted from Best-README-Template.
-  https://github.com/othneildrew/Best-README-Template
+    https://github.com/othneildrew/Best-README-Template
 -->
 
 <!-- PROJECT SHIELDS -->
@@ -66,18 +66,18 @@ To get a local copy of the project up and running on your machine, follow these 
 
 2. Install the project dependencies
 
-   If you have `direnv` installed, simply allow the environment:
+    If you have `direnv` installed, simply allow the environment:
 
-   ```sh
-   direnv allow
-   ```
+    ```sh
+    direnv allow
+    ```
 
-   Otherwise, you can use `nix-shell` to enter the environment:
+    Otherwise, you can use `nix-shell` to enter the environment:
 
-   ```sh
-   nix-shell --max-jobs $(nproc) # Linux / Windows (WSL)
-   nix-shell --max-jobs $(sysctl -n hw.ncpu) # macOS
-   ```
+    ```sh
+    nix-shell --max-jobs $(nproc) # Linux / Windows (WSL)
+    nix-shell --max-jobs $(sysctl -n hw.ncpu) # macOS
+    ```
 
 3. Run the project
 

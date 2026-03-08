@@ -39,8 +39,7 @@ If you are proposing a new feature:
 
 -  Explain in detail how it would work.
 -  Keep the scope as narrow as possible, to make it easier to implement.
--  Remember that this is a volunteer-driven project, and that contributions
-   are welcome :)
+-  Remember that this is a volunteer-driven project, and that contributions are welcome :)
 
 # Get Started!
 
@@ -91,7 +90,7 @@ just test
 ```
 
 7. Before raising a pull request you should also run tox.
-   This will run the tests across different versions of Python:
+    This will run the tests across different versions of Python:
 
 ```bash
 tox
@@ -117,4 +116,4 @@ Before you submit a pull request, check that it meets these guidelines:
 1. The pull request should include tests.
 
 2. If the pull request adds functionality, the docs should be updated.
-   Put your new functionality into a function with a docstring, and add the feature to the list in `README.md`.
+    Put your new functionality into a function with a docstring, and add the feature to the list in `README.md`.
